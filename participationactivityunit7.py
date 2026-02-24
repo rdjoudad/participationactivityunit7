@@ -1,9 +1,13 @@
-prompt = "If you share your name, we can personalize the message you see."
-prompt += "\nWhat is your first name? "
+prompt = "\nTell me something, and I will repeat it back to you."
+prompt += "\nWEnter quit to quit the program. "
 
-message = ""
-
-while message != "quit":
+active = True
+while active:
     message = input(prompt)
-    if message != "quit":
+    if message == "quit":
+        active = False
+    elif message == "parrot":
+        active = False
+        print("Oh, you think you're a wise guy, huh?")
+    else:
         print(message)
